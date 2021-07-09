@@ -1,9 +1,21 @@
 import React from 'react'
+import './player.css';
+import Sidebar from './Sidebar';
+import Body from './Body'
+import Footer from './Footer'
 
-function Player() {
+function Player({ spotify }) {
     return (
-        <div>
-            <h1>welcome to spotify</h1>
+        <div className="player">
+            <div className="player__body">
+                <Sidebar />
+
+                {/* sidebar */}
+                {/* Body */}
+                <Body />
+            </div>
+            <Footer />
+            {/* Footer */}
         </div>
     )
 }
