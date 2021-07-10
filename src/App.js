@@ -38,7 +38,12 @@ function App() {
         })
       })
     }
-    console.log("i am toekn", token)
+    spotify.getPlaylist('37i9dQZEVXcQTeef371pkN').then((discover_weekly) => {
+      dispatch({
+        type: "SET_DISCOVER_WEEKLY",
+        discover_weekly: discover_weekly,
+      })
+    })
   }, [])
   console.log("person", user);
   return (
